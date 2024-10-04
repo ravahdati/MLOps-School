@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% block title %}Breast Cancer Diagnosis{% endblock %}
-
 {% block content %}
     <div class="row gy-4">
 
@@ -11,9 +9,7 @@
 
             <h3>The First MLOps School Project</h3>
 
-            <p class="fst-italic">
-            This project aims to develop a comprehensive machine learning model to enhance the early diagnosis of breast cancer. By leveraging advanced data analytics and medical imaging, we strive to improve patient outcomes and provide better healthcare solutions.
-            </p>
+            <p class="fst-italic">This project aims to develop a comprehensive machine learning model to enhance the early diagnosis of breast cancer.</p>
 
             <ul>
                 <li><i class="bi bi-check-circle"></i> <span>Utilizes a dataset of mammogram images to train and validate the model's accuracy.</span></li>
@@ -28,7 +24,7 @@
             <div class="row gy-4">
 
                 <div class="col-lg-6">
-                    <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
+                    <img src="{{ url_for('static', filename='img/image-1.webp') }}" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-6">
@@ -36,11 +32,11 @@
                     <div class="row gy-4">
 
                         <div class="col-lg-12">
-                            <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ url_for('static', filename='img/image-2.webp') }}" class="img-fluid" alt="">
                         </div>
 
                         <div class="col-lg-12">
-                            <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
+                            <img src="{{ url_for('static', filename='img/image-3.webp') }}" class="img-fluid" alt="">
                         </div>
 
                     </div>

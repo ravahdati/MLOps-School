@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Prediction ID</th>
+            <td>{{ prediction.id }}</td>
+        </tr>
+        <tr>
+            <th>Prediction Result</th>
+            <td>{{ prediction.prediction }}</td>
+        </tr>
+        <tr>
+            <th>Mean Radius</th>
+            <td>{{ prediction.mean_radius }}</td>
+        </tr>
+        <tr>
+            <th>Mean Texture</th>
+            <td>{{ prediction.mean_texture }}</td>
+        </tr>
+        <tr>
+            <th>Mean Perimeter</th>
+            <td>{{ prediction.mean_perimeter }}</td>
+        </tr>
+        <tr>
+            <th>Mean Area</th>
+            <td>{{ prediction.mean_area }}</td>
+        </tr>
+        <tr>
+            <th>Mean Smoothness</th>
+            <td>{{ prediction.mean_smoothness }}</td>
+        </tr>
+        <tr>
+            <th>Mean Compactness</th>
+            <td>{{ prediction.mean_compactness }}</td>
+        </tr>
+        <tr>
+            <th>Mean Concavity</th>
+            <td>{{ prediction.mean_concavity }}</td>
+        </tr>
+        <tr>
+            <th>Mean Concave Points</th>
+            <td>{{ prediction.mean_concave_points }}</td>
+        </tr>
+        <tr>
+            <th>Mean Symmetry</th>
+            <td>{{ prediction.mean_symmetry }}</td>
+        </tr>
+        <tr>
+            <th>Mean Fractal Dimension</th>
+            <td>{{ prediction.mean_fractal_dimension }}</td>
+        </tr>
+
+        <tr>
+            <th>Radius Error</th>
+            <td>{{ prediction.radius_error }}</td>
+        </tr>
+        <tr>
+            <th>Texture Error</th>
+            <td>{{ prediction.texture_error }}</td>
+        </tr>
+        <tr>
+            <th>Perimeter Error</th>
+            <td>{{ prediction.perimeter_error }}</td>
+        </tr>
+        <tr>
+            <th>Area Error</th>
+            <td>{{ prediction.area_error }}</td>
+        </tr>
+        <tr>
+            <th>Smoothness Error</th>
+            <td>{{ prediction.smoothness_error }}</td>
+        </tr>
+        <tr>
+            <th>Compactness Error</th>
+            <td>{{ prediction.compactness_error }}</td>
+        </tr>
+        <tr>
+            <th>Concavity Error</th>
+            <td>{{ prediction.concavity_error }}</td>
+        </tr>
+        <tr>
+            <th>Concave Points Error</th>
+            <td>{{ prediction.concave_points_error }}</td>
+        </tr>
+        <tr>
+            <th>Symmetry Error</th>
+            <td>{{ prediction.symmetry_error }}</td>
+        </tr>
+        <tr>
+            <th>Fractal Dimension Error</th>
+            <td>{{ prediction.fractal_dimension_error }}</td>
+        </tr>
+
+        <tr>
+            <th>Worst Radius</th>
+            <td>{{ prediction.worst_radius }}</td>
+        </tr>
+        <tr>
+            <th>Worst Texture</th>
+            <td>{{ prediction.worst_texture }}</td>
+        </tr>
+        <tr>
+            <th>Worst Perimeter</th>
+            <td>{{ prediction.worst_perimeter }}</td>
+        </tr>
+        <tr>
+            <th>Worst Area</th>
+            <td>{{ prediction.worst_area }}</td>
+        </tr>
+        <tr>
+            <th>Worst Smoothness</th>
+            <td>{{ prediction.worst_smoothness }}</td>
+        </tr>
+        <tr>
+            <th>Worst Compactness</th>
+            <td>{{ prediction.worst_compactness }}</td>
+        </tr>
+        <tr>
+            <th>Worst Concavity</th>
+            <td>{{ prediction.worst_concavity }}</td>
+        </tr>
+        <tr>
+            <th>Worst Concave Points</th>
+            <td>{{ prediction.worst_concave_points }}</td>
+        </tr>
+        <tr>
+            <th>Worst Symmetry</th>
+            <td>{{ prediction.worst_symmetry }}</td>
+        </tr>
+        <tr>
+            <th>Worst Fractal Dimension</th>
+            <td>{{ prediction.worst_fractal_dimension }}</td>
+        </tr>
+
+        <tr>
+            <th>Timestamp</th>
+            <td>{{ prediction.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ url_for('history') }}" class="btn btn-secondary">Back to History</a>
+
+{% endblock %}

@@ -1,9 +1,9 @@
-pycaret==3.3.2
-flask==2.3.3
-scikit-learn==1.3.0   # Replace sklearn with scikit-learn for Python 3.8+
-pandas==2.1.1
-pickle5==0.0.11       # Use the latest version available
-flask_sqlalchemy==3.0.5
-flask_bcrypt==1.0.1
-werkzeug==2.3.7
-flask_wtf==1.1.1
+pycaret
+flask
+scikit-learn
+pandas
+flask_sqlalchemy
+flask_bcrypt
+werkzeug
+flask_wtf
+numpy

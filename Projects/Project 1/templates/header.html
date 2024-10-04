@@ -35,16 +35,15 @@
 			<nav id="navmenu" class="navmenu">
 				<ul>
 					<li><a href="{{ url_for('home') }}">Home</a></li>
-					<li><a href="{{ url_for('about') }}">About</a></li>
-					<li><a href="{{ url_for('predict') }}">Predict</a></li>
+					<li><a href="{{ url_for('input_data') }}">Predict</a></li>
+					<li><a href="{{ url_for('history') }}">History</a></li>
 				</ul>
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 			</nav>
 
 			<div class="header-social-links">
 				{% if session.get('username') %}
-					<div>Hello, User</div>
-					<a href="{{ url_for('predict') }}">Predict</a>
+					<span>Hello, User</span>
 					<a href="{{ url_for('logout') }}">Logout</a>
 				{% else %}
 					<a href="{{ url_for('login') }}">Login</a>
