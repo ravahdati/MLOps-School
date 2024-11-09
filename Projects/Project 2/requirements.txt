@@ -1,0 +1,9 @@
+pycaret
+flask
+flask_sqlalchemy
+flask_bcrypt
+scikit-learn
+werkzeug
+flask_wtf
+numpy
+wtforms

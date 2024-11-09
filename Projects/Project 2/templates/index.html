@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row gy-4">
+
+        <div class="col-lg-6 content aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+            <p class="who-we-are">Diabetes Diagnosis</p>
+
+            <h3>The Second MLOps School Project</h3>
+
+            <p class="fst-italic">This project aims to develop a comprehensive machine learning model to improve the diagnosis and progression prediction of diabetes.</p>
+
+            <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Utilizes a dataset of patient medical records to train and validate the model's accuracy for predicting diabetes progression.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Implements MLOps best practices for model deployment, monitoring, and continuous improvement.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Enhances the model using real-time feedback and patient data, ensuring better accuracy and reliability over time.</span></li>
+            </ul>
+
+        </div>
+
+        <div class="col-lg-6 about-images aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static', filename='img/image-1.webp') }}" class="img-fluid" alt="Diabetes Diagnosis">
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="row gy-4">
+
+                        <div class="col-lg-12">
+                            <img src="{{ url_for('static', filename='img/image-2.webp') }}" class="img-fluid" alt="Machine Learning">
+                        </div>
+
+                        <div class="col-lg-12">
+                            <img src="{{ url_for('static', filename='img/image-3.webp') }}" class="img-fluid" alt="Medical AI">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

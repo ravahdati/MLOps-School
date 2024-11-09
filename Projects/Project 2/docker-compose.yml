@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  diabetes-flask-app:
+    image: diabetes-flask-app:latest
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./instance/project2.db:./app/instance/project2.db
+    environment:
+      - FLASK_ENV: production
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+    networks:
+      - webnet
+
+networks:
+  webnet:

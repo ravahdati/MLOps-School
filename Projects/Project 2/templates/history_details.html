@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Prediction ID</th>
+            <td>{{ prediction.id }}</td>
+        </tr>
+        <tr>
+            <th>Prediction Result</th>
+            <td>{{ prediction.prediction }}</td>
+        </tr>
+
+        <!-- Age and Sex -->
+        <tr>
+            <th>Age</th>
+            <td>{{ prediction.age }}</td>
+        </tr>
+        <tr>
+            <th>Sex</th>
+            <td>{{ prediction.sex }}</td>
+        </tr>
+
+        <!-- Medical features -->
+        <tr>
+            <th>BMI</th>
+            <td>{{ prediction.bmi }}</td>
+        </tr>
+        <tr>
+            <th>Blood Pressure (BP)</th>
+            <td>{{ prediction.bp }}</td>
+        </tr>
+        <tr>
+            <th>S1 (Cholesterol)</th>
+            <td>{{ prediction.s1 }}</td>
+        </tr>
+        <tr>
+            <th>S2 (Low-density lipoprotein)</th>
+            <td>{{ prediction.s2 }}</td>
+        </tr>
+        <tr>
+            <th>S3 (High-density lipoprotein)</th>
+            <td>{{ prediction.s3 }}</td>
+        </tr>
+        <tr>
+            <th>S4 (Triglycerides)</th>
+            <td>{{ prediction.s4 }}</td>
+        </tr>
+        <tr>
+            <th>S5 (Blood Sugar)</th>
+            <td>{{ prediction.s5 }}</td>
+        </tr>
+        <tr>
+            <th>S6 (Other Measurement)</th>
+            <td>{{ prediction.s6 }}</td>
+        </tr>
+
+        <!-- Timestamp -->
+        <tr>
+            <th>Timestamp</th>
+            <td>{{ prediction.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ url_for('history') }}" class="btn btn-secondary">Back to History</a>
+
+{% endblock %}
