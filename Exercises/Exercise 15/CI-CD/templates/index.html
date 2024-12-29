@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row gy-4">
+
+        <div class="col-lg-6 content aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+            <h3>CI/CD Exercise</h3>
+
+            <p class="fst-italic">This project focuses on creating an advanced machine learning model to enhance the diagnosis and predict the progression of diabetes.</p>
+
+            <ul>
+                <li><i class="bi bi-check-circle"></i> <span><strong>Data-Driven Insights:</strong> The model is developed using a rich dataset of patient medical records, enabling precise training and validation to achieve high accuracy in predicting diabetes progression.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span><strong>MLOps Integration:</strong> Employs MLOps best practices to streamline the workflow of model deployment, monitoring, and continuous improvement. This ensures seamless collaboration and efficient management of machine learning pipelines.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span><strong>Adaptive Learning:</strong> The system incorporates mechanisms for real-time feedback, allowing the model to learn from new patient data continuously. This dynamic approach significantly improves the model’s accuracy and reliability over time, leading to better patient outcomes.</span></li>
+            </ul>
+
+        </div>
+
+        <div class="col-lg-6 about-images aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-12">
+                    <img src="{{ url_for('static', filename='img/diabetes-banner.webp') }}" class="img-fluid" alt="Diabetes Diagnosis">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
