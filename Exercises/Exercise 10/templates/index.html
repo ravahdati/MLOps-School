@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+
+<div class="container mt-5">
+    <form method="POST" action="{{url_for('registration')}}">
+        <div class="mb-3">
+            {{ form.username.label(class="form-label") }}
+            {{ form.username(class="form-control") }}
+            {% for err in form.username.errors %}
+                <div class="text-danger">{{ err }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control") }}
+            {% for err in form.email.errors %}
+                <div class="text-danger">{{ err }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control") }}
+            {% for err in form.password.errors %}
+                <div class="text-danger">{{ err }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ form.confirm_password.label(class="form-label") }}
+            {{ form.confirm_password(class="form-control") }}
+            {% for err in form.confirm_password.errors %}
+                <div class="text-danger">{{ err }}</div>
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+
+{% include 'footer.html' %}
